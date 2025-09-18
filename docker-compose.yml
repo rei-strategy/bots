@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"     # change to "8080:8000" if 80 is busy locally
+    environment:
+      - FLASK_ENV=production
+      # If using Google ADC, mount a key and point here:
+      # - GOOGLE_APPLICATION_CREDENTIALS=/secrets/gcp.json
+      - BOT_DIR=/app
+    volumes:
+      # comment out if unused:
+      - ./secrets:/secrets:ro
+      - ./data:/app/data
+    restart: unless-stopped
