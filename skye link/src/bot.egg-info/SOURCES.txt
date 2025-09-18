@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/main.py
+src/router.py
+src/bot.egg-info/PKG-INFO
+src/bot.egg-info/SOURCES.txt
+src/bot.egg-info/dependency_links.txt
+src/bot.egg-info/requires.txt
+src/bot.egg-info/top_level.txt
